@@ -19,7 +19,7 @@ def generate_files
   ]
 
   index = File.open("dist/index.html", "w+")
-  1000.times do |i|
+  10.times do |i|
     root = (1..10).to_a.sample(10).join("/")
     FileUtils.mkdir_p("dist/#{root}")
 
