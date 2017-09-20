@@ -23,7 +23,7 @@ def generate_files
     root = (1..10).to_a.sample(10).join("/")
     FileUtils.mkdir_p("dist/#{root}")
 
-    base.each do |k|
+    base.shuffle.each do |k|
       path = "/#{root}#{k}"
       data = k*i
 
