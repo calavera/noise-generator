@@ -25,7 +25,7 @@ def generate_files
 
     base.shuffle.each do |k|
       path = "/#{root}#{k}"
-      data = k*(i*1000)
+      data = k*((i+1)*1000)
 
       dir = "dist/#{File.dirname(path)}"
 
@@ -37,4 +37,4 @@ def generate_files
   index.close
 end
 
-#generate_files
+generate_files
