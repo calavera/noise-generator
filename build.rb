@@ -37,4 +37,4 @@ def generate_files
   index.close
 end
 
-generate_files
+#generate_files
