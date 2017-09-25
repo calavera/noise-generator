@@ -25,13 +25,13 @@ def generate_files
 
     base.shuffle.each do |k|
       path = "/#{root}#{k}"
-      data = k*((i+10)*1000)
+      data = k*((i+100)*1000)
 
       dir = "dist/#{File.dirname(path)}"
 
       FileUtils.mkdir_p(dir)
       File.open("dist#{path}", "w+") {|f| f.puts data}
-      index.puts %Q{<a href="#{path}">#{path}</a>}
+      index.puts %Q{<a href="#{path}">#{path}</a><br/>}
     end
   end
   index.close
